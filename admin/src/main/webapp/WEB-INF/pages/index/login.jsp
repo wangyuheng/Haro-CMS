@@ -1,21 +1,41 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page pageEncoding="utf-8"%>
 <%@ include file="/WEB-INF/pages/common/taglibs.jsp"%>
-<%
-	String path = request.getContextPath();
-	if(path.length()>1) {path = path + "/";} else {
-		path = "/";
-	}
-	String basePath = request.getScheme() + "://"
-			+ request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
-%>
+
 <!doctype html>
 <html>
 <head>
-	<link type="text/css" rel="stylesheet" href="<%=path%>static/css/common/base-min.css">
-	<link type="text/css" rel="stylesheet" href="<%=path%>static/css/login/login.css">
-	<script src="<%=path%>static/js/common/jquery-1.8.3.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="/static/css/common/base-min.css">
+	<link type="text/css" rel="stylesheet" href="/static/css/login/login.css">
+	<script src="/static/js/common/jquery-1.8.3.min.js"></script>
 
+	<script type="text/javascript">
+        //禁止后退键 作用于Firefox、Opera
+        document.onkeypress = forbidBackSpace;
+        //禁止后退键  作用于IE、Chrome
+        document.onkeydown = forbidBackSpace;
+
+        function forbidBackSpace(e) {
+            // 获取event对象
+            var ev = e || window.event;
+            // 获取事件源
+            var obj = ev.target || ev.srcElement;
+            // 获取事件源类型
+            var t = obj.type || obj.getAttribute('type');
+            // 获取作为判断条件的事件类型
+            var vReadOnly = obj.readOnly;
+            var vDisabled = obj.disabled;
+            // 处理undefined值情况
+            vReadOnly = (vReadOnly === undefined) ? false : vReadOnly;
+            vDisabled = (vDisabled === undefined) ? true : vDisabled;
+            // 当敲Backspace键时，事件源类型为密码或单行、多行文本的，
+            // 并且readOnly属性为true或disabled属性为true的，则退格键失效
+            var flag1 = ev.keyCode === 8 && (t === "password" || t === "text" || t === "textarea") && (vReadOnly === true || vDisabled == true);
+            // 当敲Backspace键时，事件源类型非密码或单行、多行文本的，则退格键失效
+            var flag2 = ev.keyCode === 8 && t !== "password" && t !== "text" && t !== "textarea";
+            // 判断
+            if (flag2 || flag1) return false;
+        }
+	</script>
 	<script type="text/javascript">
 
 		function login() {
@@ -25,7 +45,7 @@
 				alert("请输入用户名和密码！");
 				return;
 			}
-			document.forms[0].action = "<%=path%>login/login";
+			document.forms[0].action = "/login/login";
 			document.forms[0].submit();
 		}
 

@@ -1,5 +1,5 @@
 <%@ page language="java" pageEncoding="utf-8"%>
-<%@ include file="/WEB-INF/pages/common/import.jsp"%>
+<%@ include file="/WEB-INF/pages/common/taglibs.jsp"%>
 <div class="panelBar">
 	<ul class="toolBar clearfix">
 		<li><a href="/news/industry/add" class="btn-add">添加</a></li>
