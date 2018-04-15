@@ -1,0 +1,330 @@
+@charset "utf-8";
+/*
+	名称: G3后台核心样式表
+	作者: 段冶
+	日期: 2012/10/09
+
+	[目录表]
+	
+	0- header
+	1- layout                                    	
+	2- accordion                                    	
+	3- breadCrumb
+	4- navTabBox
+	5- grid
+	6- button
+	7- treeMenu
+	8- tabs
+	9- form
+   10- dialog
+   11- home(我的主页)
+	                 		
+*/
+
+/*	0- header
+---------------------------------------------------------------------------------------------*/
+
+body,html{height:100%;}
+.disableCss{color:#AFAFAF;cursor:default;}
+.disableCss:hover{text-decoration:none;}
+#header{height:79px;}
+#header #logo a{width:500px;height:79px;display:block;position:absolute;left:0;top:0;}
+#header #headerNav{width:418px;padding-right:30px;height:73px;position:absolute;right:0;top:0;padding-top:6px;}
+#headerNav a{display:inline-block;padding-left:20px;height:16px;line-height:16px;}
+#headerNav a:hover{text-decoration:none;}
+#header-short{height:24px;margin-bottom:3px;position:relative;display:none;}
+#header-short .btn-toggle{display:block;width:17px;height:24px;position:absolute;right:6px;top:0;}
+td{padding:3px;}
+td{word-break:break-all;}
+.marginAuto{margin-left:auto;margin-right:auto;}
+
+/*下划线*/
+.underLine{text-decoration:underline;}
+
+/*	1- layout
+---------------------------------------------------------------------------------------------*/
+.l-layout{ position:relative;}
+.l-layout-left,.l-layout-right,.l-layout-center,.l-layout-top,.l-layout-bottom{position:absolute; z-index:10; overflow:hidden;} 
+.l-layout-top{width:100%;}
+.l-layout-bottom{width:100%}
+.l-layout-header{position:relative;padding-left:10px;font-weight:bold;height:30px; line-height:30px; overflow:hidden;}
+.l-layout-header-inner{padding-left:48px;font-size:14px;}
+.l-layout-left .l-layout-header-toggle{position:absolute; top:0; right:3px; height:30px; width:15px; overflow:hidden; cursor:pointer;}
+
+.l-layout-collapse-left{ width:24px;position:absolute;top:0px;   display:none; height:100%;z-index:10;}
+.l-layout-collapse-left-toggle,.l-layout-collapse-right-toggle{position:absolute; height:20px; width:20px; overflow:hidden;cursor:pointer;}
+.l-layout-collapse-left{left:2px;}
+.l-layout-collapse-left-toggle{top:0px; right:2px; }
+.l-layout-collapse-left-toggle-over{background-position:-20px -60px;} 
+
+
+
+/*	2- accordion
+---------------------------------------------------------------------------------------------*/
+#accordion-box{overflow:hidden;}
+#accordion-box .accordion-hd{height:31px;line-height:31px;cursor:pointer;}
+#accordion-box .accordion-hd h2{overflow:hidden;font-size:14px;padding-left:28px;}
+#accordion-box .accordion-hd h2 i{float:left; display:block; overflow:hidden; text-indent:-1000px;}
+#accordion-box .accordion-hd h2 i.acc-ico-01{width:21px;height:21px;margin:6px 10px 0 0;}
+#accordion-box .accordion-hd h2 i.acc-ico-02{width:21px;height:20px;margin:6px 10px 0 0;}
+#accordion-box .accordion-hd h2 i.acc-ico-03{width:21px;height:20px;margin:4px 10px 0 0;}
+#accordion-box .accordion-hd h2 i.acc-ico-04{width:21px;height:14px;margin:10px 10px 0 0;}
+#accordion-box .accordion-hd h2 i.acc-ico-05{width:21px;height:24px;margin:4px 10px 0 0;}
+#accordion-box .accordion-hd h2 i.acc-ico-06{width:21px;height:22px;margin:4px 10px 0 0;}
+#accordion-box .accordion-hd h2 i.acc-ico-07{width:21px;height:22px;margin:4px 10px 0 0;}
+#accordion-box .accordion-hd h2 i.acc-ico-08{width:21px;height:19px;margin:6px 10px 0 0;}
+#accordion-box .accordion-ct{border-style:solid; border-width:1px 0 0 0;overflow:auto;}
+
+/*	3- breadCrumb
+---------------------------------------------------------------------------------------------*/
+#breadCrumb{height:30px;line-height:30px;font-size:14px;font-weight:bold;padding:0 20px;display:block;}
+
+/*	4- navTabBox
+---------------------------------------------------------------------------------------------*/
+.navTab-hd{height:31px;line-height:31px;border-style:solid; border-width:1px 0 0 0;position:relative;overflow:hidden;}
+.navTab-menu{position:absolute;left:0;bottom:1px;_bottom:0;width:9999px;z-index:20;margin:0;padding:0;}
+.btn-navTab-left,.btn-navTab-right{position:absolute;top:2px;width:18px;height:28px;display:none;z-index:21;}
+.btn-navTab-left{left:0;}
+.btn-navTab-right{right:0;}
+.tabUnit{position: relative;width: 100%;}
+.tabUnit iframe{width:100%;height:100%;}
+
+/*mod-unit*/
+
+.mod-unit-hd{height:25px;line-height:25px;border-style:solid; border-width:0 0 1px 0;display:block;position:relative;}
+.mod-unit-hd h2{padding-left:23px;font-size:14px;}
+.mod-unit-hd .btn-toggle{display:block;width:9px;height:11px;position:absolute;top:8px;right:10px;cursor:pointer;}
+
+
+/*	5- grid
+---------------------------------------------------------------------------------------------*/
+.panelBar{height:27px;border-style:solid; border-width:1px 1px 0 1px;}
+.panelBar .toolBar li{float:left;padding-left:5px;height:27px;line-height:27px;}
+.panelBar .toolBar li a{display:block;text-decoration:none;padding-left:20px;}
+.panelBar .toolBar li a:hover{text-decoration:none;}
+.panelBar li.div-line{display:block;overflow:hidden;padding:0;text-indent:-1000px;width:10px;background-position:0 -94px;}
+.gridBox{border-style:solid; border-width:0 1px 1px 1px;}
+.gridBox thead th{line-height:28px;border-style:solid;font-size:14px; border-width:1px 1px 1px 0;padding: 0 3px 0 10px;vertical-align: middle;text-align:left;}
+.gridBox tbody td{border-bottom: 1px solid #EDEDED;border-right: 1px solid #EDEDED;line-height: 21px;padding: 1px 3px 1px 10px;vertical-align: middle;word-wrap:break-word; word-break:break-all;}
+.gridBox .oddRow{background:#fafafa}
+.gridBox a.btn-operate{display:block;width:16px;height:18px;}
+.width-b95{width:95% !important;}
+.table-tit{font-weight:bold;height:25px;line-height:25px;padding-left:10px;border-style:solid; border-width:1px 1px 0 1px;}
+.gridBox .cellBg-gary{width:18px;padding:0 3px;text-align:center;border-right:0 none;}
+.tableTc th,.tableTc td{text-align:center !important;}
+
+/*分页*/
+.pagesBox{height:27px;line-height:27px;border-style:solid; border-width:1px 0 0 0;}
+.pagination li{float:left;margin-right:3px;}
+.pagination a{border-style:solid; border-width:1px;padding:1px 5px;text-decoration:none;}
+.pagination a:hover{border-style:solid; border-width:1px;padding:1px 5px;text-decoration:none;}
+.pagination span.current{border-style:solid; border-width:1px;padding:1px 5px;font-weight:bold;}
+.pagination span.disabled{border-style:solid; border-width:1px;background:#ffca7d;padding:1px 5px;}
+
+/*工具操作图标*/
+.toolIco{display:inline-block;margin-right:2px;width:16px;height:16px;line-height:16px;vertical-align:middle;font-size:0;}
+.toolIco{*display:inline;}
+.toolIco:hover{text-decoration:none;}
+
+
+/*	6- button
+---------------------------------------------------------------------------------------------*/
+.subBar{text-align:center;height:27px;line-height:27px;}
+.subBar ul{display:inline-block;}
+.subBar ul{*display:inline;}
+.subBar li{float:left;margin-left:4px;}
+.btn1-active,.btn-a-1{ float:left;overflow:hidden; height:25px; padding-left:5px;}
+.btn1-ct,.btn-a-1 span{ float:left;overflow:hidden; height:25px; line-height:25px; font-weight:bold;background-position:100% -44px;text-decoration:none;}
+.btn-a-1:hover span{text-decoration:none;}
+.btn1-active button,.btn-a-1 span{ width:auto; height:25px; line-height:25px;padding:0 20px !important;margin:0; border:0; font-size:12px; font-weight:bold; background:none; cursor:pointer;}
+.subBar a:hover,.btn-a-1:hover{text-decoration:none;}
+
+/* dialog button */
+.btn-dialog{display:inline-block;height:23px;margin:0 4px;}
+.btn-dialog{*display:inline;}
+.btn-dialog span{display:inline-block;height:23px; line-height:23px;padding:0 20px 0 40px !important;cursor:pointer;}
+
+
+/*	7- treeMenu
+---------------------------------------------------------------------------------------------*/
+
+div.menuTree UL{font-size: 100%;padding: 0px; margin: 0px; display:none;}
+div.menuTree a{line-height:20px;display:inline-block;}
+div.menuTree a{*display:inline;}
+div.menuTree UL LI{list-style: none;padding: 0px; padding-left: 20px;  margin: 0px; white-space: nowrap; }
+div.menuTree UL LI.parent A{text-decoration: none; padding: 0px 2px;}
+div.menuTree UL LI.parent A:hover{font-weight: bold;font-size: 110%;}
+div.menuTree UL LI.child A{text-decoration: none;padding: 0px 2px;}
+div.menuTree UL LI.child A:hover{font-weight: bold;font-size: 110%;}
+
+
+/*	8- tabs
+---------------------------------------------------------------------------------------------*/
+/* 主框架tab */
+
+.navTab-menu{padding:3px 2px 0 0;}
+.navTab-menu li{height:27px;line-height:27px;float:left;margin-left:2px;position:relative;}
+.navTab-menu li a.tab-l{display:inline-block; overflow:hidden; height:27px;line-height:27px; padding-left:4px;}
+.navTab-menu li a:hover{text-decoration:none;}
+.navTab-menu li a.tab-l span{display:inline-block;overflow:hidden; height:27px; line-height:27px;  width:auto; padding:0 20px;cursor:pointer;}
+.navTab-menu li .close{display:block;width:10px;height:10px;position:absolute;right:4px;top:4px;font-size:0;}
+.navTab-menu li.current a{font-weight:bold;}
+.home_icon{float:left;margin:6px 4px 0 0;width:13px;height:13px;}
+
+
+.home_icon{float:left;margin:6px 4px 0 0;width:13px;height:13px;}
+
+/* 通用tab */
+.tabNav{height:28px;line-height:28px;position:relative;}
+.tabNav ul{position:absolute;left:4px;bottom:-1px;}
+.tabNav li{float:left; height:23px; line-height:23px;border-style:solid; border-width:1px 1px 1px 1px;padding:0px 5px;margin-right:3px;}
+.tabNav li.current{border-width:1px 1px 0 1px;height:24px;line-height:24px;}
+.tabNav li a:hover{text-decoration:none;}
+.tabContent{clear:both; padding:10px;}
+.tabCt-list{display:none;}
+
+/*	9- form
+---------------------------------------------------------------------------------------------*/
+/* select */
+.select-name{display:block;height:22px;line-height:22px;}
+.select-box{position:relative;z-index:31;}
+.select-box .valBox{display:block;line-height:20px; width:155px; height:20px; overflow:hidden;padding-right:20px; padding-left:5px;cursor:default;border:1px solid;}
+.select-box .inputBox{border:1px solid;position:relative;width:180px;height:20px;}
+.select-box .inputBox .inp{border:0 none;height:18px;line-height:18px;width:158px;padding-left:5px;position:absolute;top:0;left:0;}
+.select-box .inputBox .icoArrow{display:block;width:16px;height:20px;position:absolute;top:0;right:0;}
+.select-ct{display:none;position:absolute;left:0;top:21px;}
+.select-box .select_ul{width:180px;z-index: 99999;overflow:auto;}
+.select-box .select_ul li {display:block;height:25px;overflow:hidden;line-height:25px;padding-left:5px;cursor:pointer;}
+.select-box .select_ul li label{display:block;cursor:pointer;}
+.select-tree{width:180px;border:1px solid #A2C6E3;overflow-x:auto;}
+.select-tree li.child a{cursor:default !important;}
+.select-tree li.child a:hover{font-weight:normal !important;font-size:12px !important;}
+.select-tree li.curr a{color:#000 !important;font-weight:normal !important;}
+.select-tree li label{display:block;}
+.select-grid{overflow:auto;}
+.select-Hauto{height:200px;overflow:auto;}
+.selectDF{ height:22px;line-height:22px;overflow: hidden;width: 182px;}
+.mark-must{color:red;vertical-align:top;*zoom:1;}
+.iptSearch{height:20px;line-height:20px;border-style:solid;border-width:1px;width:180px;position:relative;z-index:1;}
+.iptSearch input{border:0 none;padding-left:10px;width:153px;height:17px;line-height:17px;}
+.iptSearch i{display:block;width:16px;height:16px;font-size:0;position:absolute;right:0;top:2px;cursor:pointer;}
+.iptSearch .popBox{width:180px;background:#fff;border-style:solid;border-width:1px;z-index:999;position:absolute;left:-1px;top:20px;display:none;}
+
+.dropdown{width:128px;border:1px solid;height:20px;line-height:20px;overflow:hidden;padding:0 18px 0 5px;}
+#dropdownOptionsFor{border:1px solid;padding-left:5px;overflow:auto;}
+#dropdownOptionsFor li a{white-space:nowrap;}
+
+/*表单验证*/
+.form-box label{float:left;width:120px;text-align:right;}
+.formInfo,.formError{display:inline-block;margin-left:10px;padding-left:20px;line-height:20px;}
+.formInfo,.formError{*display:inline;}
+.f-text-field{border:1px solid #AECAF0;height:18px;line-height:18px;margin: 0;width:150px;}
+
+
+/*	10- dialog
+---------------------------------------------------------------------------------------------*/
+.dialog-overlay{filter:alpha(opacity:50); opacity: 0.5}
+.dialog {padding:10px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;min-width:400px;}
+
+
+.dialog .bar{font-size:14px;min-height:15px;cursor:move;height:25px;line-height:25px;}
+.dialog .bar .title{float:left; margin-right:10px;}
+.dialog .bar .close,.dialog .bar .toggle{float:right;cursor:pointer;text-decoration:underline;width:15px;height:15px;text-indent:-9999px;}
+.dialog .bar .toggle{margin-right:4px;}
+.dialog .content{padding:10px;}
+.dialog .content td{padding:3px;}
+.dialog .dialog-box{padding:10px 15px 15px 15px;}
+.dialog .subBox{padding:5px 0;text-align:center;}
+.dialog .subBox ul{display:inline-block;}
+.dialog .subBox ul{_display:inline;}
+.dialog .subBox li{float: left;margin-left:4px;}
+.dialog IFRAME{WIDTH: 100%; HEIGHT: 100%;}
+.content IMG {MAX-WIDTH: 700px; OVERFLOW: auto; MAX-HEIGHT: 500px;}
+.dialog td{padding:0;}
+input.valBox{ line-height:18px; width:150px; height:18px; overflow:hidden;border:1px solid #a1c5e2; padding-right:20px; padding-left:10px;overflow:hidden; }
+.ico-dialog-warn{display:inline-block;width:17px;height:17px;position:absolute;margin-left:-20px;}
+.ico-dialog-question{display:inline-block;width:18px;height:20px;position:absolute;margin-left:-20px;}
+
+/*圆角边框*/
+.dialog .lt,.dialog .rt,.dialog .lb,.dialog .rb{line-height:0;}
+.dialog .lt,.dialog .rt,.dialog .lb,.dialog .rb{height:6px;width:6px;}
+.dialog .t,.dialog .b,.dialog .l,.dialog .r{line-height:0;}
+.dialog .l,.dialog .r{width:10px;}
+.dialog .t,.dialog .b{height:10px;}
+
+
+/*	11- home(我的主页)
+---------------------------------------------------------------------------------------------*/
+.home-left{float:left; margin-right:-210px; width:100%}
+.home-in-left{margin-right:210px;padding:20px;}
+.home-right{width:180px;float:right;padding:10px;}
+.infoCount{line-height:25px;font-size:14px;margin:5px 0;}
+.cl-bule{color:#1147a0;}
+#fn-titleBar{height:37px;line-height:37px;}
+.fn-settings,.fn-add{width:25px;height:17px;line-height:18px;display:block;padding-left:17px;margin:12px 10px 0 0;}
+.fn-list{padding:40px 0 0 40px;}
+.fn-list li{width:80px;float:left;text-align:center;text-decoration:underline;margin-right:60px}
+.fn-list li i{display:inline-block;width:52px;height:52px;}
+.fn-list li p{text-decoration:underline;}
+#calendar-tit{height:24px;line-height:24px;text-align:center;}
+
+/*	
+---------------------------------------------------------------------------------------------*/
+.enterInfo-box{padding:10px;margin-bottom:20px;}
+.enterInfo-box h3.tit{padding:0 10px;float: left; margin-top: -20px;}
+
+/*	遮罩
+---------------------------------------------------------------------------------------------*/
+.loadmask{z-index: 9999;position: absolute;top:0;left:0;-moz-opacity: 0.5;opacity: .50;filter: alpha(opacity=50);background-color: #CCC;width: 100%;height: 100%;zoom: 1;}
+.loadmask-msg{z-index: 20001;position: absolute;top: 0;left: 0;}
+.loadmask-msg div{padding:10px 20px;line-height: 16px;cursor:wait;}
+.masked{overflow: hidden !important;}
+.masked-relative{position: relative !important;}
+.masked-hidden{visibility: hidden !important;}
+
+/*	弹出层
+---------------------------------------------------------------------------------------------*/
+.popBox-out{padding:10px;}
+.popBox-in{padding:20px;border:1px solid;}
+.mod-unit-ct{*zoom:1;}
+
+/*	鼠标右键菜单
+---------------------------------------------------------------------------------------------*/
+.simple-contextmenu{display:none;position:absolute;left:100px;top:100px;min-width:100px;width:100px;border:1px solid;}
+.simple-contextmenu li{padding:1px;}
+.simple-contextmenu li a{position:relative;display:block;padding:1px 1px 1px 2px;text-decoration:none;margin:1px;}
+.simple-contextmenu li a:hover{border:1px solid; outline:1px solid;margin:0;cursor:default;}
+
+/*	编辑器产生的内容
+---------------------------------------------------------------------------------------------*/
+.editorBox h1,.editorBox h2,.editorBox h3,.editorBox h4,.editorBox h5,.editorBox h6,.editorBox b,.editorBox strong{ font-weight:bolder;}
+.editorBox h1{font-size: 2em; margin: .67em 0;}
+.editorBox h2{font-size: 1.5em; margin: .75em 0;}
+.editorBox h3{font-size: 1.17em; margin: .83em 0;}
+.editorBox h4,.editorBox p,.editorBox blockquote,.editorBox ul,.editorBox fieldset,.editorBox form,.editorBox ol,.editorBox dl,.editorBox dir,.editorBox menu{ margin: 1.12em 0;}
+.editorBox h5{font-size: .83em; margin:1.5em 0;}
+.editorBox h6{font-size: .75em; margin:1.67em 0;}
+.editorBox i,.editorBox cite,.editorBox em,.editorBox var,.editorBox address{font-style: italic;}
+.editorBox ol,.editorBox ul,.editorBox dir,.editorBox menu,.editorBox dd{margin-left: 40px;}
+.editorBox ol{list-style-type: decimal;}
+
+/* 宽度	
+---------------------------------------------------------------------------------------------*/
+.w210{width:210px;}
+.w220{width:220px;}
+.w230{width:230px;}
+.w240{width:240px;}
+.w250{width:250px;}
+
+/*	不可点击按钮样式
+---------------------------------------------------------------------------------------------*/
+.btnDisable{border:1px solid #ADB2B5 !important;background-image:none !important;background-color:#F4F4F4 !important;color:#6D6D6D !important;cursor:default;}
+.btnDisable span{background-image:none !important;background-color:#F4F4F4 !important;color:#6D6D6D !important;cursor:default;}
+
+/*错误页*/
+.error_tips{width:368px;height:107px;padding:110px 40px 20px 40px;position:absolute;left:35%;top:30%;overflow:hidden;text-align:center;}
+
+/*分类标签*/
+.dy_tagList{padding:10px 0 0 10px;border-bottom:1px solid;}
+.dy_tagList li{margin:0 8px 8px 0;padding:0 18px 0 4px;line-height:20px;*zoom:1;float:left;background:#f1f7ff;border:1px solid #a6c0d7;position:relative;}
+.dy_tagList li i{width:14px;height:13px;display:block;position:absolute;right:2px;top:4px;cursor:pointer;background:url(images/ico_tagClose.png) no-repeat;}

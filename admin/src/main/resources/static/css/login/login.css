@@ -1,0 +1,13 @@
+@charset "utf-8";
+body{background:#bee7ed url(images/body_bg.png) repeat-x;}
+.login-box{width:528px;margin:220px auto 0 auto;}
+.login-hd{height:16px;background:url(images/login-hd.png) no-repeat;}
+.login-ft{height:18px;background:url(images/login-ft.png) no-repeat;}
+.login-ct{background:url(images/login-ct.png) repeat-y;padding:0 10px;}
+.login-logo{height:35px;font:20px/30px '微软雅黑';text-align:center;border-bottom:1px solid #94bfea;}
+.login-in{background:url(images/login-in_bg.png) 300px 10px no-repeat;padding:10px 250px 10px 0;}
+.form-box{padding:10px 0;}
+.form-box label{display:block;width:100px;text-align:right;float:left;color:#32667b;}
+.login-btn{width:99px;height:28px;background:url(images/login-btn.png) no-repeat;border:0 none;cursor:pointer;}
+.form-box input,.form-box select{border:1px solid #7fb0b7;height:18px;line-height:18px;width:148px;}
+.fmor2{display:none;}
