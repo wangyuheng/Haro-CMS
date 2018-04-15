@@ -5,7 +5,7 @@
 2. **view** 展示企业信息及新闻
 3. **core** 业务数据层
 
-![pharos_1.png](https://raw.githubusercontent.com/wangyuheng/haro/dev/doc/haro_design.png))
+![haro_design.png](https://github.com/wangyuheng/Haro-CMS/blob/master/doc/haro_design.png))
 
 ### 历史
 原项目为传统spring+jsp项目开发，基于web.xml配置。
