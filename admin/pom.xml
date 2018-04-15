@@ -2,16 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <!--<groupId>wang.crick.business</groupId>-->
-    <!--<artifactId>haro-admin</artifactId>-->
-    <!--<version>1.0-SNAPSHOT</version>-->
-    <!--<packaging>war</packaging>-->
 
     <parent>
         <groupId>wang.crick.business</groupId>
         <artifactId>haro</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>haro-admin</artifactId>
@@ -28,6 +24,11 @@
             <artifactId>haro-core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
         <!-- Provided -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -41,18 +42,19 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <useSystemClassLoader>false</useSystemClassLoader>
-                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
