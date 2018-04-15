@@ -1,0 +1,12 @@
+@startuml
+
+Actor manager
+
+manager -> admin: edit content
+admin -> core: persistence data
+
+Actor User
+User -> view: visit web
+view -> core: query data
+
+@enduml
