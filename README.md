@@ -20,3 +20,10 @@ mvn spring-boot:run
 admin 和 view 只负责业务渲染与鉴权，业务操作放在core中，方便后期进行前后端分离。
 生产环境数据库使用mysql，为了方便演示，开发环境使用H2内嵌数据库。
 
+#### admin 
+
+![haro_admin](https://github.com/wangyuheng/Haro-CMS/blob/master/doc/haro_admin.png)
+
+#### view
+
+![haro_view](https://github.com/wangyuheng/Haro-CMS/blob/master/doc/haro_view.png)
